@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface AirportRepository extends JpaRepository<Airport, Long>{
        List<Airport> findByCityIgnoreCase(String City);
        List<Airport> findByCountryIgnoreCase(String Country);
+       
+       Airport findByIataCode(String iataCode);
 }
